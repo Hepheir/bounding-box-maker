@@ -13,6 +13,7 @@ import cv2
 
 KEY_BACKSPACE = 127
 KEY_SPACE = 32
+KEY_ENTER = 13
 KEY_ESC = 27
 KEY_LEFT = 63234
 KEY_RIGHT = 63235
@@ -193,7 +194,7 @@ class Labeler(WindowHandler):
         cv2.rectangle(self.out, (bbox.x, bbox.y), (bbox.x+bbox.w, bbox.y+bbox.h), color, thickness)
 
     def on_key_press(self, key: int) -> None:
-        if key == KEY_SPACE:
+        if key in (KEY_SPACE, KEY_ENTER):
             self.save_mouse_coordinates()
         if key == KEY_BACKSPACE:
             self.drop_mouse_coordinates()
