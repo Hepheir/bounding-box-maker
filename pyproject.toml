@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "image-labeling-helper"
+name = "bounding-box-maker"
 version = "0.1.0"
 description = ""
 authors = ["Hepheir <hepheir@gmail.com>"]
